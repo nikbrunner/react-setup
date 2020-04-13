@@ -1,0 +1,12 @@
+@import '../../../index.scss';
+
+.Markdown {
+  ul {
+    list-style: none;
+    font-size: $font-size-l;
+
+    li {
+      line-height: 1.5;
+    }
+  }
+}
