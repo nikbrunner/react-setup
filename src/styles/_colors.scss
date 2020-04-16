@@ -1,7 +1,7 @@
-// Colors
+@charset "UTF-8";
 /*
 * Static color-palette
-* Taken from https://www.nordtheme.com/
+* Starter palette taken from https://www.nordtheme.com/
 */
 
 $color-bright-3: #e5e9f0;
@@ -26,12 +26,12 @@ $color-dark-1: #2e3440;
 
 $color-accent-hue-degree: 180deg;
 $color-accent-2: scale-color(
-  saturate(adjust-hue($color-dark-4, $color-accent-hue-degree), 100%),
-  $lightness: 65%
+                saturate(adjust-hue($color-dark-4, $color-accent-hue-degree), 100%),
+        $lightness: 65%
 );
 $color-accent-1: scale-color(
-  saturate(adjust-hue($color-dark-4, $color-accent-hue-degree), 100%),
-  $lightness: 35%
+                saturate(adjust-hue($color-dark-4, $color-accent-hue-degree), 100%),
+        $lightness: 35%
 );
 /*
 * Automatic palette-generation via Sass

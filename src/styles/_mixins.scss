@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import 'variables';
 @import 'colors';
 
@@ -38,22 +39,22 @@
 ) {
   background: $color1;
   background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from($dir),
-    color-stop($color1-threshold, $color1),
-    color-stop($color2-threshold, $color2)
+                  linear,
+                  left top,
+                  left bottom,
+                  from($dir),
+                  color-stop($color1-threshold, $color1),
+                  color-stop($color2-threshold, $color2)
   );
   background: -o-linear-gradient(
-    $dir,
-    $color1 $color1-threshold,
-    $color2 $color2-threshold
+                  $dir,
+                  $color1 $color1-threshold,
+                  $color2 $color2-threshold
   );
   background: linear-gradient(
-    $dir,
-    $color1 $color1-threshold,
-    $color2 $color2-threshold
+                  $dir,
+                  $color1 $color1-threshold,
+                  $color2 $color2-threshold
   );
 }
 
@@ -66,41 +67,41 @@
 ) {
   background: $color1;
   background: -o-radial-gradient(
-    $dir,
-    $color1 $color1-threshold,
-    $color2 $color2-threshold
+                  $dir,
+                  $color1 $color1-threshold,
+                  $color2 $color2-threshold
   );
   background: radial-gradient(
-    $dir,
-    $color1 $color1-threshold,
-    $color2 $color2-threshold
+                  $dir,
+                  $color1 $color1-threshold,
+                  $color2 $color2-threshold
   );
 }
 
 @mixin progressBarBg($skillLevel: 35%, $color: green) {
   background: transparent;
   background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from($color),
-    color-stop($skillLevel, $color),
-    color-stop($skillLevel, rgba(255, 255, 255, 0)),
-    to(rgba(255, 255, 255, 0))
+                  linear,
+                  left top,
+                  right top,
+                  from($color),
+                  color-stop($skillLevel, $color),
+                  color-stop($skillLevel, rgba(255, 255, 255, 0)),
+                  to(rgba(255, 255, 255, 0))
   );
   background: -o-linear-gradient(
-    left,
-    $color 0%,
-    $color $skillLevel,
-    rgba(255, 255, 255, 0) $skillLevel,
-    rgba(255, 255, 255, 0) 100%
+                  left,
+                  $color 0%,
+                  $color $skillLevel,
+                  rgba(255, 255, 255, 0) $skillLevel,
+                  rgba(255, 255, 255, 0) 100%
   );
   background: linear-gradient(
-    90deg,
-    $color 0%,
-    $color $skillLevel,
-    rgba(255, 255, 255, 0) $skillLevel,
-    rgba(255, 255, 255, 0) 100%
+                  90deg,
+                  $color 0%,
+                  $color $skillLevel,
+                  rgba(255, 255, 255, 0) $skillLevel,
+                  rgba(255, 255, 255, 0) 100%
   );
 }
 
@@ -144,15 +145,15 @@
   $blur-3: calc((((#{$y-3} * #{$blurFac})) * #{$exp}) * 3);
 
   -webkit-box-shadow: $x-1 $y-1 $blur-1 $transpColor,
-    $x-2 $y-2 $blur-2 $transpColor, $x-3 $y-3 $blur-3 $transpColor;
+  $x-2 $y-2 $blur-2 $transpColor, $x-3 $y-3 $blur-3 $transpColor;
 
   box-shadow: $x-1 $y-1 $blur-1 $transpColor,
-    $x-2 $y-2 $blur-2 $transpColor, $x-3 $y-3 $blur-3 $transpColor;
+  $x-2 $y-2 $blur-2 $transpColor, $x-3 $y-3 $blur-3 $transpColor;
 }
 
 // Element stylings
 @mixin buttonStyle(
-  $color: $color-white,
+  $color: $color-bright-3,
   $bgColor: false,
   $font-size: $font-size-m,
   $border-radius: 0,

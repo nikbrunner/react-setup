@@ -4,15 +4,19 @@ This is my personal react setup
 
 ## Features
 
-- Parcel
 - React
-- TypeScript
+- React Router DOM
+- Parcel
 - Sass
-- Stillness
+- Markdown
 - Autoprefixer
 - Static Folder
 
 ## Todos
+
+### Optimization
+
+- [ ] Set env-Variable to avoid relative  and to long paths. Work with https://code.visualstudio.com/docs/editor/variables-reference
 
 ### Add Features
 
@@ -22,6 +26,8 @@ This is my personal react setup
 ### Styles
 
 - [ ] Better Styles Structure to be scalable and avoid duplicates
+  - https://stackoverflow.com/a/20924703
+  - https://sass-lang.com/documentation/at-rules/import
 - [ ] General markdown styles file
 - [ ] Theme file ?
 

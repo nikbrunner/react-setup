@@ -12,6 +12,9 @@
 /dist
 /.cache
 
+# editor
+/.idea
+
 # misc
 .DS_Store
 .env.local

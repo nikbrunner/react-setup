@@ -1,4 +1,4 @@
-@import '../../../index.scss';
+@import '../../../styles/allVars';
 
 .Welcome {
   @include boxShadow($color: $color-dark-1);
