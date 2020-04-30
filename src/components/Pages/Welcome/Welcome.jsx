@@ -2,14 +2,17 @@ import React from 'react';
 
 import Markdown from '../../Elements/Markdown/Markdown';
 
-import staticContent from './staticContent.md';
+import WelcomeContent from './Welcome.md';
 
 import './Welcome.scss';
 
 const Welcome = () => {
     return (
         <div className='Welcome'>
-            <Markdown content={staticContent}/>
+            <Markdown
+                content={WelcomeContent}
+                classNames={'Welcome__text'}
+            />
         </div>
     );
 };

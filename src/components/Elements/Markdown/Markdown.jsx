@@ -3,7 +3,7 @@ import marked from 'marked';
 
 import './Markdown.scss';
 
-const Markdown = ({content}) => {
+const Markdown = ({content, classNames}) => {
     const getStaticContent = () => {
         const rawMarkup = marked(content);
         return {__html: rawMarkup};
@@ -11,7 +11,7 @@ const Markdown = ({content}) => {
 
     return (
         <div
-            className='Markdown'
+            className={`${classNames ? classNames : ''} Markdown`}
             dangerouslySetInnerHTML={getStaticContent()}
         />
     );
