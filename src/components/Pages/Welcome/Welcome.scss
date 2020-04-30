@@ -7,12 +7,12 @@
   background: $color-bright-3;
   color: $color-dark-3;
   margin: $space-m;
-  padding: $space-s;
+  padding: $space-l;
   border-radius: $border-radius;
   transition: all 0.3s ease;
 
   @include mq('m') {
-    padding: $space-l;
+    padding: $space-xl;
     margin: $space-l auto;
     max-width: 500px;
   }

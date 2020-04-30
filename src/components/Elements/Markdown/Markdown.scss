@@ -1,9 +1,22 @@
 @import '../../../styles/allVars';
 
 .Markdown {
+  width: 100%;
+
+  blockquote {
+    background: $color-bright-1;
+    margin: $space-m 0;
+    padding:  $space-s $space-m;
+    border-radius: $border-radius;
+    border-left: 5px solid $color-dark-1;
+    line-height: 1.25;
+  }
+
   ul {
     list-style: none;
     font-size: $font-size-l;
+    padding-left: $space-m;
+    border-left: 5px solid transparent;
 
     li {
       line-height: 1.5;
