@@ -22,18 +22,7 @@
     transform: translateY(-4px);
   }
 
-  &__header {
+  h1 {
     margin-top: 0;
-    font-size: $font-size-xl;
-
-    @include mq('s') {
-      font-size: $font-size-xxl;
-    }
-  }
-
-  &__author {
-    margin-top: $space-m;
-    width: 100%;
-    text-align: center;
   }
 }
