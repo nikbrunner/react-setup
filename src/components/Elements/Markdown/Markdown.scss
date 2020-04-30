@@ -16,7 +16,7 @@
     background: $color-bright-1;
     margin: $space-m 0 $space-l;
     padding:  $space-s $space-m;
-    border-radius: $border-radius;
+    border-radius: calc(#{$border-radius} / 2);
     border-left: 5px solid $color-dark-1;
     line-height: 1.25;
   }
@@ -29,6 +29,15 @@
 
     li {
       line-height: 1.5;
+      position: relative;
+
+      &::before {
+        content: '*';
+        position: absolute;
+        top: -1.65px;
+        left: -22px;
+        font-size: $font-size-xl;
+      }
     }
   }
 }
