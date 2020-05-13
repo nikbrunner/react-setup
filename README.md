@@ -1,6 +1,10 @@
-# My React Setup
+# Biophore
 
-This is my personal react setup
+![](./src/assets/img/banner.png)
+
+This is my personal React setup.
+
+`Work in Progress`
 
 ## Features
 
@@ -8,20 +12,24 @@ This is my personal react setup
 - React Router DOM
 - Parcel
 - Sass
+- Typescript
 - Markdown
 - Autoprefixer
+- Prettier
+- ESLint
 - Static Folder
 
-## Todos
+## To-Do
 
-### Optimization
+## General
 
-- [ ] Set env-Variable to avoid relative  and to long paths. Work with https://code.visualstudio.com/docs/editor/variables-reference
+- [x] Define name
 
 ### Add Features
 
 - [ ] Prettier
 - [ ] ESLint
+- [ ] TypeScript
 
 ### Styles
 
@@ -35,11 +43,14 @@ This is my personal react setup
 
 - [ ] Implement ContextAPI
 
-### JavaScript
+### Structure
 
 - [ ] Implement folder for helpers
+- [ ] Define flexible and scalable component structure (Atomic Design ?)
 
 ### Components
 
-- [x] ~~_Create StaticContent-component for Markdown-Content ( And the implement the styles for the markdown. Look style todos)_~~ [2020-04-13]
-- [ ] Define flexible and scalable component structure (Atomic Design ?)
+- [ ] Markdown
+    - [x] Create StaticContent-component for Markdown-Content ( And the implement the styles for the markdown. Look style todos)_
+    - [ ] Dynamic Path Import
+- [ ] Create additional example components
