@@ -2,9 +2,12 @@
 
 ![](./src/assets/img/banner.png)
 
-This is my personal React setup.
-
-`Work in Progress`
+<p style="text-align: center">
+    This is my personal React setup.
+</p>
+<p style="text-align: center">
+    `Work in Progress`
+</p>
 
 ## Features
 
