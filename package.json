@@ -1,7 +1,7 @@
 {
-  "name": "react-setup",
-  "version": "1.0.0",
-  "description": "My personal react-setup",
+  "name": "biophore",
+  "version": "0.1.5",
+  "description": "My personal React-setup",
   "main": "src/index.js",
   "scripts": {
     "dev": "parcel ./src/index.html",
@@ -10,6 +10,10 @@
   },
   "author": "nibru",
   "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/nikbrunner/biophore"
+  },
   "staticFiles": {
     "staticPath": "./src/static",
     "watcherGlob": "**"
