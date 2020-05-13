@@ -1,0 +1,34 @@
+@charset "UTF-8";
+@import 'uni-space';
+@import 'colors';
+
+// Header
+$header-height: 50px;
+
+// Border-radius
+$border-radius: 0.5rem;
+
+// Transition
+$trans-fast: 0.25s;
+$trans-normal: 0.5s;
+$trans-slow: 0.75s;
+
+// Fonts
+$header-font-name: 'Rubik';
+$text-font-name: 'Rubik';
+$mono-font-name: 'Operator Mono';
+
+// Font-declarations
+$header-font: $header-font-name, sans-serif;
+$text-font: $text-font-name, sans-serif;
+$mono-font: $mono-font-name, sans-serif;
+
+// Font-sizes
+$font-size-m: 16px;
+
+$font-size-xs: calc(#{$font-size-m} * 0.5);
+$font-size-s: calc(#{$font-size-m} * 0.75);
+$font-size-l: calc(#{$font-size-m} * 1.25);
+$font-size-xl: calc(#{$font-size-m} * 2);
+$font-size-xxl: calc(#{$font-size-m} * 4);
+$font-size-xxxl: calc(#{$font-size-m} * 6);

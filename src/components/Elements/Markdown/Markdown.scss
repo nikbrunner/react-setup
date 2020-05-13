@@ -1,0 +1,43 @@
+@import '../../../styles/allVars';
+
+.Markdown {
+  width: 100%;
+
+  h1 {
+    font-size: $font-size-xl;
+    margin-bottom: $space-l;
+
+    @include mq('s') {
+      font-size: $font-size-xxl;
+    }
+  }
+
+  blockquote {
+    background: $color-bright-1;
+    margin: $space-m 0 $space-l;
+    padding:  $space-s $space-m;
+    border-radius: calc(#{$border-radius} / 2);
+    border-left: 5px solid $color-dark-1;
+    line-height: 1.25;
+  }
+
+  ul {
+    list-style: none;
+    font-size: $font-size-l;
+    padding-left: $space-m;
+    border-left: 5px solid transparent;
+
+    li {
+      line-height: 1.5;
+      position: relative;
+
+      &::before {
+        content: '*';
+        position: absolute;
+        top: -1.65px;
+        left: -22px;
+        font-size: $font-size-xl;
+      }
+    }
+  }
+}

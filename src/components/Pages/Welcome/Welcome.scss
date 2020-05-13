@@ -1,0 +1,28 @@
+@import '../../../styles/allVars';
+
+.Welcome {
+  @include boxShadow($color: $color-dark-1);
+  @include flex(column nowrap, space-between, flex-start, flex-start);
+
+  background: $color-bright-3;
+  color: $color-dark-3;
+  margin: $space-m;
+  padding: $space-l;
+  border-radius: $border-radius;
+  transition: all 0.3s ease;
+
+  @include mq('m') {
+    padding: $space-xl;
+    margin: $space-l auto;
+    max-width: 500px;
+  }
+
+  &:hover {
+    @include boxShadow($color: $color-dark-1, $y: 4px);
+    transform: translateY(-4px);
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+}

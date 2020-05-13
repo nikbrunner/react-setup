@@ -1,0 +1,194 @@
+@charset "UTF-8";
+@import 'variables';
+@import 'colors';
+
+// Layout
+@mixin grid(
+  $columns,
+  $column-gap: $space-m,
+  $rows: auto,
+  $row-gap: $space-m
+) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-column-gap: $column-gap;
+  grid-template-rows: $rows;
+  grid-row-gap: $row-gap;
+}
+
+@mixin flex(
+  $flex-flow,
+  $justify-content: center,
+  $align-content: center,
+  $align-items: center
+) {
+  display: flex;
+  flex-flow: $flex-flow;
+  justify-content: $justify-content;
+  align-content: $align-content;
+  align-items: $align-items;
+}
+
+// Backgrounds
+@mixin linearGradientBG(
+  $color1,
+  $color1-threshold,
+  $color2,
+  $color2-threshold,
+  $dir
+) {
+  background: $color1;
+  background: -webkit-gradient(
+                  linear,
+                  left top,
+                  left bottom,
+                  from($dir),
+                  color-stop($color1-threshold, $color1),
+                  color-stop($color2-threshold, $color2)
+  );
+  background: -o-linear-gradient(
+                  $dir,
+                  $color1 $color1-threshold,
+                  $color2 $color2-threshold
+  );
+  background: linear-gradient(
+                  $dir,
+                  $color1 $color1-threshold,
+                  $color2 $color2-threshold
+  );
+}
+
+@mixin radialGradientBG(
+  $color1,
+  $color1-threshold,
+  $color2,
+  $color2-threshold,
+  $dir
+) {
+  background: $color1;
+  background: -o-radial-gradient(
+                  $dir,
+                  $color1 $color1-threshold,
+                  $color2 $color2-threshold
+  );
+  background: radial-gradient(
+                  $dir,
+                  $color1 $color1-threshold,
+                  $color2 $color2-threshold
+  );
+}
+
+@mixin progressBarBg($skillLevel: 35%, $color: green) {
+  background: transparent;
+  background: -webkit-gradient(
+                  linear,
+                  left top,
+                  right top,
+                  from($color),
+                  color-stop($skillLevel, $color),
+                  color-stop($skillLevel, rgba(255, 255, 255, 0)),
+                  to(rgba(255, 255, 255, 0))
+  );
+  background: -o-linear-gradient(
+                  left,
+                  $color 0%,
+                  $color $skillLevel,
+                  rgba(255, 255, 255, 0) $skillLevel,
+                  rgba(255, 255, 255, 0) 100%
+  );
+  background: linear-gradient(
+                  90deg,
+                  $color 0%,
+                  $color $skillLevel,
+                  rgba(255, 255, 255, 0) $skillLevel,
+                  rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@mixin columns(
+  $column-count: 2,
+  $column-gap: 1rem,
+  $column-rule: 1px solid dashed
+) {
+  -webkit-column-count: $column-count;
+  -moz-column-count: $column-count;
+  column-count: $column-count;
+  -webkit-column-gap: $column-gap;
+  -moz-column-gap: $column-gap;
+  column-gap: $column-gap;
+  -webkit-column-rule: $column-rule;
+  -moz-column-rule: $column-rule;
+  column-rule: $column-rule;
+}
+
+// Shadows
+@mixin boxShadow(
+  $color: #000,
+  $x: 0px,
+  $y: 1px,
+  $blurFac: 2,
+  $exp: 1,
+  $transp: 0.95
+) {
+  $transpColor: transparentize($color, $transp);
+
+  $x-1: calc((#{$x} * #{$exp}) * 1);
+  $y-1: calc((#{$y} * #{$exp}) * 1);
+  $blur-1: calc((((#{$y-1} * #{$blurFac})) * #{$exp}) * 1);
+
+  $x-2: calc((#{$x} * #{$exp}) * 2);
+  $y-2: calc((#{$y} * #{$exp}) * 2);
+  $blur-2: calc((((#{$y-2} * #{$blurFac})) * #{$exp}) * 2);
+
+  $x-3: calc((#{$x} * #{$exp}) * 3);
+  $y-3: calc((#{$y} * #{$exp}) * 3);
+  $blur-3: calc((((#{$y-3} * #{$blurFac})) * #{$exp}) * 3);
+
+  -webkit-box-shadow: $x-1 $y-1 $blur-1 $transpColor,
+  $x-2 $y-2 $blur-2 $transpColor, $x-3 $y-3 $blur-3 $transpColor;
+
+  box-shadow: $x-1 $y-1 $blur-1 $transpColor,
+  $x-2 $y-2 $blur-2 $transpColor, $x-3 $y-3 $blur-3 $transpColor;
+}
+
+// Element stylings
+@mixin buttonStyle(
+  $color: $color-bright-3,
+  $bgColor: false,
+  $font-size: $font-size-m,
+  $border-radius: 0,
+  $hoverActive: false
+) {
+  cursor: pointer;
+  color: $color;
+  display: block;
+  padding: $space-m $space-l;
+  border-radius: $border-radius;
+  font-weight: bold;
+  font-family: $text-font;
+  font-size: $font-size;
+
+  @if ($bgColor) {
+    background: $bgColor;
+    border: 3px solid $bgColor;
+  } @else {
+    background: transparent;
+    border: 3px solid $color;
+  }
+
+  @if ($hoverActive) {
+    @if ($bgColor) {
+      &:hover {
+        background: transparentize($color: $color, $amount: 0.75);
+      }
+    } @else {
+      &:hover {
+        background: $color;
+        border: 3px solid $bgColor;
+        color: $bgColor;
+      }
+    }
+  }
+
+  @content;
+}
