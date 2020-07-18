@@ -14,6 +14,8 @@
 
 # editor
 /.idea
+Session.vim
+/.undodir
 
 # misc
 .DS_Store
